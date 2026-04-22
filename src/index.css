@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Montserrat", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Bodoni Moda", serif;
+  
+  --color-gold: #f0c040;
+  --color-dark: #070707;
+  --color-gray-dark: #151515;
+  --color-gray-light: #252525;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased overflow-x-hidden;
+  }
+}
