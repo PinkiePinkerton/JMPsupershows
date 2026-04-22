@@ -11,7 +11,6 @@
 import { motion } from "motion/react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import logo from "./assets/logo.png";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService";
 import Reno2026 from "./Reno2026";
@@ -23,6 +22,8 @@ import {
   Info, 
   Store,
 } from "lucide-react";
+
+const logo = "/jmp_logo.png?v=5";
 
 const SOCIAL_LINKS = [
   { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/jm_productions_sw/", size: 150 },
