@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Calendar, MapPin, Clock, CreditCard, CheckCircle } from "lucide-react";
+import { ArrowLeft, Calendar, MapPin, Clock, CreditCard, CheckCircle, ChevronLeft } from "lucide-react";
 import { useEffect } from "react";
 
 const flyer = "https://i.postimg.cc/dQfmQRjV/reno-flyer.jpg";
@@ -102,16 +102,16 @@ export default function Reno2026() {
         {/* Desktop Overlay */}
         <div className="absolute inset-0 bg-black/70 hidden lg:block h-0 w-[200px]" />
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute top-6 left-6 z-20"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="fixed top-4 left-4 z-50"
         >
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors font-bold uppercase text-sm tracking-wider bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10"
+            className="flex items-center justify-center w-10 h-10 text-yellow-400 transition-all hover:scale-110 bg-black/50 backdrop-blur-md rounded-full border-2 border-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.3)]"
+            aria-label="Back to Hub"
           >
-            <ArrowLeft size={16} />
-            Back to Hub
+            <ChevronLeft size={24} />
           </Link>
         </motion.div>
 
