@@ -2,7 +2,8 @@ import { motion } from "motion/react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Calendar, MapPin, Clock, CreditCard, CheckCircle } from "lucide-react";
 import { useEffect } from "react";
-import flyer from "./reno-flyer.jpg";
+
+const flyer = "/reno-flyer.jpg";
 
 const SPONSORS = [
   "Baldy's Mixed Drinks",
