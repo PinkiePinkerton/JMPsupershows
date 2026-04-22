@@ -23,7 +23,7 @@ import {
   Store,
 } from "lucide-react";
 
-const logo = "/logo.png?v=6";
+const logo = "https://raw.githubusercontent.com/PinkiePinkerton/JMPsupershows/main/public/logo.png";
 
 const SOCIAL_LINKS = [
   { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/jm_productions_sw/", size: 150 },
