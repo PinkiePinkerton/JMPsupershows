@@ -23,7 +23,7 @@ import {
   Store,
 } from "lucide-react";
 
-const logo = "https://raw.githubusercontent.com/PinkiePinkerton/JMPsupershows/main/public/logo.png";
+const logo = "/jmp-official-logo.png";
 
 const SOCIAL_LINKS = [
   { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/jm_productions_sw/", size: 150 },
@@ -106,7 +106,6 @@ function Hub() {
               src={logo} 
               alt="JMP Logo" 
               className="w-full h-full object-contain"
-              referrerPolicy="no-referrer"
             />
           </div>
         </motion.div>
