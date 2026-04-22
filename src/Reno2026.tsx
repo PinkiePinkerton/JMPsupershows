@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Calendar, MapPin, Clock, CreditCard, CheckCircle } from "lucide-react";
 import { useEffect } from "react";
 
-const flyer = "/jmp-reno-event-flyer.jpg";
+const flyer = "https://i.postimg.cc/dQfmQRjV/reno-flyer.jpg";
 
 const SPONSORS = [
   "Baldy's Mixed Drinks",
