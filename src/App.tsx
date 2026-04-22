@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService";
 import Reno2026 from "./Reno2026";
+import ThankYou from "./ThankYou";
 import { 
   Facebook, 
   Instagram, 
@@ -230,6 +231,7 @@ export default function App() {
       <Route path="/reno" element={<Reno2026 />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<TermsOfService />} />
+      <Route path="/thank-you" element={<ThankYou />} />
     </Routes>
   );
 }
