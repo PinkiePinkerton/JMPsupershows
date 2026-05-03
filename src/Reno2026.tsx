@@ -144,44 +144,6 @@ export default function Reno2026() {
         animate="visible"
         className="max-w-[600px] mx-auto px-6 py-12 space-y-8"
       >
-        {/* Action Card */}
-        <motion.div 
-          variants={itemVariants}
-          className={`p-8 rounded-2xl border text-center shadow-2xl ${
-            isPreSaleOver 
-              ? 'bg-gray-dark border-gold' 
-              : 'bg-[#161616] border-white/10'
-          }`}
-        >
-          {isPreSaleOver ? (
-            <div id="ticket-button-container">
-              <p className="text-gold font-bold uppercase tracking-widest mb-2">Pre-Sale Ended</p>
-              <p className="text-white text-3xl font-black uppercase italic leading-tight">Tickets Available at the Gate</p>
-              <p className="text-gray-400 text-sm mt-4 uppercase tracking-widest font-bold">Box Office opens May 15th at 11:00 AM</p>
-            </div>
-          ) : (
-            <div id="ticket-button-container">
-              <h3 className="text-lg font-bold uppercase tracking-wider text-gray-400 mb-2">Advance Will Call Special</h3>
-              <span className="text-6xl font-black text-gold block my-4">$30.00</span>
-              <p className="text-gray-400 mb-8">Save $8.00 per ticket when you book in advance through JM Productions.</p>
-              <motion.a 
-                href="https://book.stripe.com/eVq3cxgeO1bs0GRbZp18c00" 
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleInitiateCheckout}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="block w-full bg-gold text-dark py-5 rounded-xl font-black text-2xl uppercase tracking-wider shadow-[0_10px_20px_rgba(0,0,0,0.3)] transition-all"
-              >
-                Get Advance Tickets
-              </motion.a>
-              <p className="text-xs mt-6 text-gray-500 uppercase tracking-widest font-black">
-                Early Bird Pricing Ends May 14 at Midnight
-              </p>
-            </div>
-          )}
-        </motion.div>
-
         {/* Logistics Grid */}
         <motion.div 
           variants={itemVariants}

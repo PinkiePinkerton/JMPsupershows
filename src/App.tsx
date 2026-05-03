@@ -46,13 +46,6 @@ const PRIORITY_LINKS = [
     isInternal: true
   },
   { 
-    name: "BUY RENO SUPER SHOW TICKETS", 
-    url: "https://book.stripe.com/eVq3cxgeO1bs0GRbZp18c00", 
-    icon: Ticket, 
-    className: "bg-white text-dark border-white text-[1.2rem] md:text-[1.25rem]",
-    target: "_blank"
-  },
-  { 
     name: "RSVP ON FACEBOOK EVENT", 
     url: "https://www.facebook.com/share/19u6XNq6Ki/", 
     icon: Facebook, 
