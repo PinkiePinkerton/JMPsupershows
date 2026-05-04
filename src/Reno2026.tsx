@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Calendar, MapPin, Clock, CreditCard, CheckCircle, ChevronLeft } from "lucide-react";
+import { ArrowLeft, Calendar, MapPin, Clock, CreditCard, CheckCircle, ChevronLeft, Ticket } from "lucide-react";
 import { useEffect } from "react";
 
 const flyer = "https://i.postimg.cc/dQfmQRjV/reno-flyer.jpg";
@@ -144,45 +144,74 @@ export default function Reno2026() {
         animate="visible"
         className="max-w-[600px] mx-auto px-6 py-12 space-y-8"
       >
+        {/* Action Card */}
+        <motion.div 
+          variants={itemVariants}
+          className={`p-8 rounded-2xl border text-center shadow-2xl ${
+            isPreSaleOver 
+              ? 'bg-gray-dark border-gold' 
+              : 'bg-[#161616] border-white/10'
+          }`}
+        >
+          {isPreSaleOver ? (
+            <div id="ticket-button-container">
+              <p className="text-gold font-bold uppercase tracking-widest mb-2">Pre-Sale Ended</p>
+              <p className="text-white text-3xl font-black uppercase italic leading-tight font-display">Tickets Available at the Gate</p>
+              <p className="text-gray-400 text-sm mt-4 uppercase tracking-widest font-bold font-sans">Box Office opens May 15th at 11:00 AM</p>
+            </div>
+          ) : (
+            <div id="ticket-button-container">
+              <h3 className="text-lg font-bold uppercase tracking-wider text-gray-400 mb-2 font-sans">Advance Will Call Special</h3>
+              <span className="text-6xl font-black text-gold block my-4 font-display">$38.00</span>
+              <p className="text-gray-400 mb-8 font-sans">Save when you book in advance through JM Productions.</p>
+              <motion.a 
+                href="https://book.stripe.com/eVq4gB7Ii07o1KVbZp18c01" 
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleInitiateCheckout}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="block w-full bg-gold text-dark py-5 rounded-xl font-black text-2xl uppercase tracking-wider shadow-[0_10px_20px_rgba(0,0,0,0.3)] transition-all font-sans"
+              >
+                Get Advance Tickets
+              </motion.a>
+              <p className="text-xs mt-6 text-gray-500 uppercase tracking-widest font-black font-sans">
+                Early Bird Pricing Ends May 14 at Midnight
+              </p>
+            </div>
+          )}
+        </motion.div>
+
         {/* Logistics Grid */}
         <motion.div 
           variants={itemVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4"
         >
           <div className="bg-[#222] p-5 rounded-xl border border-white/5">
             <div className="flex items-center gap-2 mb-2">
               <Calendar className="text-gold" size={16} />
-              <strong className="text-gold text-[0.75rem] uppercase tracking-widest">When</strong>
+              <strong className="text-gold text-[0.75rem] uppercase tracking-widest font-sans">When</strong>
             </div>
-            <p className="text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed font-sans">
               Saturday, May 16<br />11:00 AM – 6:00 PM
             </p>
           </div>
           <div className="bg-[#222] p-5 rounded-xl border border-white/5">
             <div className="flex items-center gap-2 mb-2">
               <MapPin className="text-gold" size={16} />
-              <strong className="text-gold text-[0.75rem] uppercase tracking-widest">Where</strong>
+              <strong className="text-gold text-[0.75rem] uppercase tracking-widest font-sans">Where</strong>
             </div>
-            <p className="text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed font-sans">
               Reno-Sparks Convention Center
             </p>
           </div>
           <div className="bg-[#222] p-5 rounded-xl border border-white/5">
             <div className="flex items-center gap-2 mb-2">
               <Clock className="text-gold" size={16} />
-              <strong className="text-gold text-[0.75rem] uppercase tracking-widest">Parking</strong>
+              <strong className="text-gold text-[0.75rem] uppercase tracking-widest font-sans">Parking</strong>
             </div>
-            <p className="text-sm leading-relaxed">
-              $10 On-Site / Free at Atlantis Lot
-            </p>
-          </div>
-          <div className="bg-[#222] p-5 rounded-xl border border-white/5">
-            <div className="flex items-center gap-2 mb-2">
-              <CreditCard className="text-gold" size={16} />
-              <strong className="text-gold text-[0.75rem] uppercase tracking-widest">Door Price</strong>
-            </div>
-            <p className="text-sm leading-relaxed">
-              $38 General / $33 Military & Seniors
+            <p className="text-sm leading-relaxed font-sans">
+              $10 On-Site<br />Free at Atlantis Lot
             </p>
           </div>
         </motion.div>
